@@ -7,13 +7,14 @@
 var ItemRow = React.createClass({
     render: function() {
         var image = 'https://image.tmdb.org/t/p/w185/' + this.props.result.poster_path;
+        var addURL = '/api/addShow/' + this.props.result.id;
         return (
             <tr>
                 <td>{this.props.result.name}</td>
                 <td>{this.props.result.overview}</td>
                 <td><img src={image}/></td>
                 <td>
-                    <button>Add to Collection</button>
+                    <a href={addURL} className="ui button">Add to Collection</a>
                 </td>
             </tr>
         );

@@ -36,29 +36,6 @@ app.get('/api/scan', function(req, res) {
     });
 });
 
-app.post('/api/comments', function(req, res) {
-    fs.readFile(COMMENTS_FILE, function(err, data) {
-        if (err) {
-            console.error(err);
-            process.exit(1);
-        }
-        var comments = JSON.parse(data);
-        var newComment = {
-            id: Date.now(),
-            author: req.body.author,
-            text: req.body.text,
-        };
-        comments.push(newComment);
-        fs.writeFile(COMMENTS_FILE, JSON.stringify(comments, null, 4), function(err) {
-            if (err) {
-                console.error(err);
-                process.exit(1);
-            }
-            res.json(comments);
-        });
-    });
-});
-
 app.get('/api/search/tv/:title', function(req, res) {
     mdb.searchTv({query: req.params.title }, function(err, data){
         if (err) {
@@ -80,11 +57,26 @@ app.get('/api/search/movie/:title', function(req, res) {
 });
 
 app.get('/api/addShow/:show_id', function(req, res) {
-    mdb.tvInfo({id: req.params.show_id }, function(err, data){
+    var showId = req.params.show_id;
+    fs.readFile(INDEX_FILE, function(err, localData) {
         if (err) {
-            res.send(err);
+            console.error(err);
+            process.exit(1);
         } else {
-            res.json(data);
+            if (localData.length) {
+                var allShows = JSON.parse(localData);
+                checkIfShowExists(allShows, showId, function (showExists) {
+                    if (!showExists) {
+                        addNewShowToLocalStorage(showId, allShows, function (success) {
+                            if (success) {
+                                res.json({message: 'added new show successfully'});
+                            }
+                        });
+                    } else {
+                        res.json({message: 'show already exists!'});
+                    }
+                });
+            }
         }
     });
 });
@@ -102,3 +94,42 @@ app.get('/api/addMovie/:movie_id', function(req, res) {
 app.listen(app.get('port'), function() {
     console.log('Server started: http://localhost:' + app.get('port') + '/');
 });
+
+
+var checkIfShowExists = function(allShows, showId, callback) {
+    var showExists = false;
+    if (allShows.length < 2) {
+        if (allShows.id == showId) {
+            showExists = true;
+            console.log('show #' + showId + ' already exists!');
+        }
+    } else {
+        allShows.forEach(function (show) {
+            if (show.id == showId) {
+                showExists = true;
+                console.log('show #' + showId + ' already exists!');
+            }
+        });
+    }
+    callback(showExists);
+};
+
+var addNewShowToLocalStorage = function(showId, localData, callback) {
+    mdb.tvInfo({id: showId }, function(err, data){
+        if (err) {
+            res.send(err);
+        } else {
+            console.log('writing new show data');
+            if (localData) {
+                localData.push(data);
+            }
+            fs.writeFile(INDEX_FILE, JSON.stringify(localData, null, 4), function(err) {
+                if (err) {
+                    console.error(err);
+                    process.exit(1);
+                }
+                callback(true);
+            });
+        }
+    });
+}
