@@ -1,220 +1,99 @@
 [
     {
-        "backdrop_path": "/dG25UWq95YSIxovAjALLQwsg1x2.jpg",
+        "backdrop_path": "/qmG25kFDFbIdgSYIx1DF56HnMWp.jpg",
         "created_by": [
             {
-                "id": 56323,
-                "name": "Tina Fey",
-                "profile_path": "/7yJNtRogHfDFkeB6I0WCjCwTwfh.jpg"
-            },
-            {
-                "id": 1224760,
-                "name": "Robert Carlock",
+                "id": 206780,
+                "name": "Matthew Carnahan",
                 "profile_path": null
             }
         ],
         "episode_run_time": [
-            27
+            30
         ],
-        "first_air_date": "2015-03-06",
+        "first_air_date": "2012-01-08",
         "genres": [
             {
                 "id": 35,
                 "name": "Comedy"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
             }
         ],
-        "homepage": "https://www.netflix.com/title/80025384",
-        "id": 61671,
+        "homepage": "http://www.sho.com/sho/house-of-lies/home",
+        "id": 39702,
         "in_production": true,
         "languages": [
             "en"
         ],
-        "last_air_date": "2016-04-15",
-        "name": "Unbreakable Kimmy Schmidt",
+        "last_air_date": "2016-06-12",
+        "name": "House of Lies",
         "networks": [
             {
-                "id": 213,
-                "name": "Netflix"
+                "id": 67,
+                "name": "Showtime"
             }
         ],
-        "number_of_episodes": 26,
-        "number_of_seasons": 2,
+        "number_of_episodes": 58,
+        "number_of_seasons": 5,
         "origin_country": [
             "US"
         ],
         "original_language": "en",
-        "original_name": "Unbreakable Kimmy Schmidt",
-        "overview": "After 15 years of living in a cult, the unbreakable and wide-eyed Kimmy is rescued along with four other women, causing a national sensation that culminates with an appearance on the ”Today” show. Before getting back on the bus to Indiana, however, Kimmy decides it’s time to reclaim her life. Armed with just a backpack, light-up sneakers, a couple way-past-due library books and a big wad of rescue-fund cash, she’s ready to take on New York City.",
-        "popularity": 2.973085,
-        "poster_path": "/5rj9fHmVA1r54wjCpPw5ScW0WT2.jpg",
-        "production_companies": [
-            {
-                "name": "Little Stranger",
-                "id": 26402
-            },
-            {
-                "name": "Universal Television",
-                "id": 26727
-            }
-        ],
+        "original_name": "House of Lies",
+        "overview": "Charming, fast talking Marty Kaan and his crack team of management consultants know how to play the corporate game better than anyone, by using every dirty trick in the book to woo powerful CEOs and close huge deals. In the board rooms, barrooms, and bedrooms of the power elite, corruption is business as usual and everyone's out for themselves first. Nothing is sacred in this scathing, irreverent satire of corporate America today.",
+        "popularity": 3.099075,
+        "poster_path": "/qfAqVUiELTbuCn4jaWSouhnFuPT.jpg",
+        "production_companies": [],
         "seasons": [
             {
-                "air_date": "2015-03-06",
-                "episode_count": 13,
-                "id": 63619,
-                "poster_path": "/rfgL4sax0xMqzIdn6n9QhWMo86d.jpg",
+                "air_date": "2013-12-31",
+                "episode_count": 1,
+                "id": 51001,
+                "poster_path": null,
+                "season_number": 0
+            },
+            {
+                "air_date": "2012-01-08",
+                "episode_count": 12,
+                "id": 50999,
+                "poster_path": "/a2OHUpBvN7pJt8ZqN4XPSl5Y4U6.jpg",
                 "season_number": 1
             },
             {
-                "air_date": "2016-04-15",
-                "episode_count": 13,
-                "id": 75130,
-                "poster_path": "/SAqdW9JjgW7XmWRfou3cN5o5KS.jpg",
+                "air_date": "2013-01-13",
+                "episode_count": 12,
+                "id": 51000,
+                "poster_path": "/mv9ss5kjcFl29N43KC1MelhqVCe.jpg",
                 "season_number": 2
+            },
+            {
+                "air_date": "2014-01-12",
+                "episode_count": 12,
+                "id": 51002,
+                "poster_path": "/sJjMEynLmQYRoyFZYzU3lLkY2n3.jpg",
+                "season_number": 3
+            },
+            {
+                "air_date": "2015-01-11",
+                "episode_count": 12,
+                "id": 63380,
+                "poster_path": "/b8OxyFBHulA7N4iyeRHpq33xexS.jpg",
+                "season_number": 4
+            },
+            {
+                "air_date": "2016-04-10",
+                "episode_count": 10,
+                "id": 75967,
+                "poster_path": null,
+                "season_number": 5
             }
         ],
         "status": "Returning Series",
         "type": "Scripted",
-        "vote_average": 7.5,
-        "vote_count": 24
-    },
-    {
-        "backdrop_path": "/lMEX9TOz1TgW5B6AzpXp3uhOTyF.jpg",
-        "created_by": [
-            {
-                "id": 169061,
-                "name": "David Shore",
-                "profile_path": "/uLpE2VLq6O2Q3o4MIbp8EZrb28u.jpg"
-            }
-        ],
-        "episode_run_time": [
-            44
-        ],
-        "first_air_date": "2004-11-16",
-        "genres": [
-            {
-                "id": 18,
-                "name": "Drama"
-            },
-            {
-                "id": 35,
-                "name": "Comedy"
-            },
-            {
-                "id": 9648,
-                "name": "Mystery"
-            }
-        ],
-        "homepage": "http://www.fox.com/house/index.htm",
-        "id": 1408,
-        "in_production": false,
-        "languages": [
-            "en"
-        ],
-        "last_air_date": "2012-05-21",
-        "name": "House",
-        "networks": [
-            {
-                "id": 19,
-                "name": "Fox Broadcasting Company"
-            }
-        ],
-        "number_of_episodes": 177,
-        "number_of_seasons": 8,
-        "origin_country": [
-            "US"
-        ],
-        "original_language": "en",
-        "original_name": "House",
-        "overview": "House is an American television medical drama that originally ran on the Fox network for eight seasons, from November 16, 2004 to May 21, 2012. The show's main character is Dr. Gregory House, a drug-addicted, unconventional, misanthropic medical genius who leads a team of diagnosticians at the fictional Princeton–Plainsboro Teaching Hospital in New Jersey.",
-        "popularity": 4.41925,
-        "poster_path": "/lxSzRZ49NXwsiyHuvMsd19QxduC.jpg",
-        "production_companies": [
-            {
-                "name": "Bad Hat Harry Productions",
-                "id": 9168
-            },
-            {
-                "name": "Universal Television",
-                "id": 26727
-            },
-            {
-                "name": "Shore Z Productions",
-                "id": 40480
-            },
-            {
-                "name": "Heel & Toe Films",
-                "id": 75256
-            }
-        ],
-        "seasons": [
-            {
-                "air_date": null,
-                "episode_count": 5,
-                "id": 3682,
-                "poster_path": "/4qDffrHMZRjSqiR3mVmzvAkhh54.jpg",
-                "season_number": 0
-            },
-            {
-                "air_date": "2004-11-16",
-                "episode_count": 22,
-                "id": 3674,
-                "poster_path": "/gS4VG3kPxemCeBi03ZSyp0D38yT.jpg",
-                "season_number": 1
-            },
-            {
-                "air_date": "2005-09-13",
-                "episode_count": 24,
-                "id": 3675,
-                "poster_path": "/34v6pV9ZDLD34yC0XoJKlZEcgXn.jpg",
-                "season_number": 2
-            },
-            {
-                "air_date": "2006-09-05",
-                "episode_count": 24,
-                "id": 3679,
-                "poster_path": "/4eH9A1ewQy09BPiucMdlnj6Y8fL.jpg",
-                "season_number": 3
-            },
-            {
-                "air_date": "2007-09-25",
-                "episode_count": 16,
-                "id": 3678,
-                "poster_path": "/a7oR1IqiQFs5KTJdFbUEMuPLyWI.jpg",
-                "season_number": 4
-            },
-            {
-                "air_date": "2008-09-16",
-                "episode_count": 24,
-                "id": 3676,
-                "poster_path": "/9REVyCZOxFBQaSUAHeladffjAUq.jpg",
-                "season_number": 5
-            },
-            {
-                "air_date": "2009-09-21",
-                "episode_count": 22,
-                "id": 3677,
-                "poster_path": "/scOmbC01RAAjGtod8Uqh3C5FxRG.jpg",
-                "season_number": 6
-            },
-            {
-                "air_date": "2010-09-20",
-                "episode_count": 23,
-                "id": 3680,
-                "poster_path": "/A7kXA3ZR8npZx4Qduw5QuMSCYz0.jpg",
-                "season_number": 7
-            },
-            {
-                "air_date": "2011-10-03",
-                "episode_count": 22,
-                "id": 3681,
-                "poster_path": "/hkPSkf8RaOzuYiQjy65ZAstWzJ7.jpg",
-                "season_number": 8
-            }
-        ],
-        "status": "Ended",
-        "type": "Scripted",
-        "vote_average": 7.9,
-        "vote_count": 145
+        "vote_average": 6,
+        "vote_count": 19
     }
 ]
