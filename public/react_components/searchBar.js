@@ -6,14 +6,15 @@
 
 var ItemRow = React.createClass({
     render: function() {
-        var name =  <span style={{color: 'blue'}}>
-                        {this.props.result.name}
-                    </span>;
+        var image = 'https://image.tmdb.org/t/p/w185/' + this.props.result.poster_path;
         return (
             <tr>
-                <td>{name}</td>
-                <td>{this.props.result.id}</td>
-                <td>{this.props.result.poster_path}</td>
+                <td>{this.props.result.name}</td>
+                <td>{this.props.result.overview}</td>
+                <td><img src={image}/></td>
+                <td>
+                    <button>Add to Collection</button>
+                </td>
             </tr>
         );
     }
@@ -21,18 +22,18 @@ var ItemRow = React.createClass({
 
 var ResultsTable = React.createClass({
     render: function() {
-        console.log(this.props.data);
         var rows = [];
         this.props.data.forEach(function (result) {
             rows.push(<ItemRow result={result} key={result.name}/>);
         });
         return (
-            <table class="ui celled striped table">
+            <table className="ui celled striped table">
                 <thead>
                 <tr>
                     <th>Name</th>
-                    <th>ID</th>
-                    <th>File Path</th>
+                    <th>Overview</th>
+                    <th>Poster Path</th>
+                    <th>Add To Collection</th>
                 </tr>
                 </thead>
                 <tbody>{rows}</tbody>
@@ -59,14 +60,18 @@ var SearchBar = React.createClass({
     },
     render: function() {
         return (
-            <form className="searchForm" onSubmit={this.handleSubmit}>
-                <input
-                    type="text"
-                    placeholder="Search..."
-                    value={this.state.title}
-                    onChange={this.handleTitleChange}
-                />
-                <input type="submit" value="Post" />
+            <form className="searchForm ui centered grid form" onSubmit={this.handleSubmit}>
+                <div className="two fields row">
+                    <div className="field">
+                        <input
+                            type="text"
+                            placeholder="Search shows here!"
+                            value={this.state.title}
+                            onChange={this.handleTitleChange}
+                        />
+                    </div>
+                    <input className="ui button" type="submit" value="Search" />
+                </div>
             </form>
         );
     }
@@ -81,7 +86,7 @@ var SearchResultsTable = React.createClass({
             success: function(data) {
                 ReactDOM.render(
                     <ResultsTable data={data.results} />,
-                    document.getElementById('searchresults')
+                    document.getElementById('search-results-component')
                 );
             }.bind(this),
             error: function(xhr, status, err) {
@@ -104,5 +109,5 @@ var SearchResultsTable = React.createClass({
 
 ReactDOM.render(
     <SearchResultsTable data=''/>,
-    document.getElementById('container')
+    document.getElementById('search-component')
 );
