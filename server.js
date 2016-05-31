@@ -6,6 +6,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 
+var APP_SETTINGS = path.join(appRoot, 'appSettings.json');
+
 app.set('port', (process.env.PORT || 5050));
 app.use('/', express.static(path.join(appRoot, 'public')));
 app.use(bodyParser.json());

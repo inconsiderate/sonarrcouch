@@ -1,6 +1,8 @@
 module.exports = function(app){
 
-    require('./api/addShow')(app);
+    require('./api/addSeries')(app);
     require('./api/search')(app);
+    require('./api/scan')(app);
+    require('./api/library')(app);
 
 };

@@ -1,16 +1,10 @@
-// input field to search for a show
-// send search param to the server
-// server makes the api call to find it and return a list of of matches
-// each match has an "add button"
-
-
 var ItemRow = React.createClass({
     render: function() {
         var image = 'https://image.tmdb.org/t/p/w185/' + this.props.result.poster_path;
-        var addURL = '/api/addShow/' + this.props.result.id;
+        var addURL = '/api/addMovie/' + this.props.result.id;
         return (
             <tr>
-                <td>{this.props.result.name}</td>
+                <td>{this.props.result.title}</td>
                 <td>{this.props.result.overview}</td>
                 <td><img src={image}/></td>
                 <td>
@@ -25,7 +19,7 @@ var ResultsTable = React.createClass({
     render: function() {
         var rows = [];
         this.props.data.forEach(function (result) {
-            rows.push(<ItemRow result={result} key={result.name}/>);
+            rows.push(<ItemRow result={result} key={result.title}/>);
         });
         return (
             <table className="ui celled striped table">
@@ -81,7 +75,7 @@ var SearchBar = React.createClass({
 var SearchResultsTable = React.createClass({
     handleSearchSubmit: function(title) {
         $.ajax({
-            url: '/api/search/tv/' + title,
+            url: '/api/search/movie/' + title,
             dataType: 'json',
             cache: false,
             success: function(data) {
