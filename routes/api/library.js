@@ -1,24 +1,15 @@
-var fs = require('fs');
-var path = require('path');
-var mdb = require('moviedb')('6d22a3b530e6d0e01197fb9f13b69403');
-var INDEX_SERIES_FILE = path.join(appRoot, 'indexSeries.json');
-var INDEX_MOVIES_FILE = path.join(appRoot, 'indexMovies.json');
+require('../../dbUtilities/schema.js');
+var mongoose = require('mongoose');
+var movieSchema = require('mongoose').model('Movie').schema;
+var Movie = mongoose.model('Movie', movieSchema);
 
 
 module.exports = function(app) {
-<<<<<<< Updated upstream
-=======
-    
->>>>>>> Stashed changes
 	app.get('/api/library/movie', function (req, res) {
-		fs.readFile(INDEX_MOVIES_FILE, function (err, data) {
-			if (err) {
-				res.json(err)
-			} else {
-				var allMovies = JSON.parse(data);
-				res.json(allMovies)
-			}
-		})
+        Movie.find({}, function(err, result) {
+            if (err) return err;
+            res.json(result);
+        });
 	});
 
 	app.get('/api/library/series', function (req, res) {

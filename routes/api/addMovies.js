@@ -1,8 +1,6 @@
 module.exports = function(app) {
-    var fs = require('fs');
-    var path = require('path');
     var mdb = require('moviedb')('6d22a3b530e6d0e01197fb9f13b69403');
-    require('../../data/dbUtilities/schema.js');
+    require('../../dbUtilities/schema.js');
     var mongoose = require('mongoose');
     var movieSchema = require('mongoose').model('Movie').schema;
     var Movie = mongoose.model('Movie', movieSchema);
@@ -22,10 +20,9 @@ module.exports = function(app) {
                     console.log('adding movie');
                     if (result === true) {
                         // todo: not disconnecting properly after db actions
-                        db.disconnect();
+                        // db.disconnect();
                         res.json({message: 'Added new movie successfully'});
                     } else {
-                        db.disconnect();
                         res.json({result});
                     }
                 });
