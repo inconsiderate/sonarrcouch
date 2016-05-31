@@ -36,6 +36,7 @@ node_modules
 .idea
 
 # General config files
-indexMovies.json
-indexSeries.json
 appSettings.json
+
+# Local DB
+data

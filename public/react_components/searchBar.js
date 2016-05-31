@@ -25,7 +25,7 @@ var ResultsTable = React.createClass({
             <table className="ui celled striped table">
                 <thead>
                 <tr>
-                    <th>Name</th>
+                    <th>Title</th>
                     <th>Overview</th>
                     <th>Poster Path</th>
                     <th>Add To Collection</th>

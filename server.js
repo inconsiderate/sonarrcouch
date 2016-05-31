@@ -1,10 +1,16 @@
 appRoot = __dirname;
-
 var fs = require('fs');
 var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+var mongoose = require('mongoose');
+
+var APP_SETTINGS = path.join(appRoot, 'appSettings.json');
+require('./routes/routes')(app);
+
+
+
 
 var APP_SETTINGS = path.join(appRoot, 'appSettings.json');
 
@@ -24,7 +30,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-require('./routes/routes')(app);
+
 
 app.listen(app.get('port'), function() {
     console.log('Server started: http://localhost:' + app.get('port') + '/');

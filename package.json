@@ -2,6 +2,10 @@
   "name": "sonarrcouchapi",
   "version": "0.0.1",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/inconsiderate/sonarrcouch.git"
+  },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +15,8 @@
   "dependencies": {
     "body-parser": "1.0.1",
     "express": "4.4.5",
+    "mongodb": "^2.1.21",
+    "mongoose": "^4.4.19",
     "moviedb": "^0.2.3"
   }
 }

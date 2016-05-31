@@ -17,6 +17,7 @@ var ItemRow = React.createClass({
 
 var ResultsTable = React.createClass({
 	render: function() {
+<<<<<<< Updated upstream
 		var allMovies = this.props.data;
 		var rows = [];
 		for (var prop in allMovies) {
@@ -36,6 +37,27 @@ var ResultsTable = React.createClass({
 				<tbody>{rows}</tbody>
 			</table>
 		);
+=======
+        // TODO: fix this to work when there is no data to display
+        var allMovies = this.props.data;
+        var rows = [];
+        for (var prop in allMovies) {
+            rows.push(<ItemRow result={allMovies[prop]} key={allMovies[prop].title}/>);
+        }
+        return (
+            <table className="ui celled striped table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Overview</th>
+                    <th>Poster</th>
+                    <th>Search Now</th>
+                </tr>
+                </thead>
+                <tbody>{rows}</tbody>
+            </table>
+        );
+>>>>>>> Stashed changes
 	}
 });
 
